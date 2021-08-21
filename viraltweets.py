@@ -200,8 +200,6 @@ train_tweets['tweet_topic_ids'].value_counts()
 
 train_tweets['tweet_topic_ids'].mode()
 
-plt.figure(figsize=(10, 6))
-sns.heatmap(train_tweets.isnull(), yticklabels=False, cmap='viridis', cbar=False);
 
 train_tweets['tweet_topic_ids'].fillna(train_tweets['tweet_topic_ids'].mode()[0], inplace=True)
 
