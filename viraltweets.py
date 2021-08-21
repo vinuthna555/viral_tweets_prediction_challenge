@@ -680,7 +680,7 @@ sns.barplot(x="Value", y="Feature", data=feature_imp.sort_values(by="Value", asc
 
 X = p_final_df.drop(['tweet_user_id', 'tweet_id', 'user_id','language_26', 'topic_id_117', 'topic_id_123', 'topic_id_38'], axis=1)
 
-solution = clf.predict(X)
+solution = rfs_model.predict(X)
 solution_df = pd.concat([p_final_df[['tweet_id']], pd.DataFrame(solution, columns = ['virality'])], axis=1)
 solution_df.head()
 
